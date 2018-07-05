@@ -1,1 +1,1 @@
-# Leetcode
+这是个人的leetcode笔记，写的比较low。。。。
