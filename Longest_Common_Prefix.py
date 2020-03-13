@@ -17,6 +17,9 @@ Input: ["dog","racecar","car"]
 Output: ""
 Explanation: There is no common prefix among the input strings.
 """
+"""
+找出最长前缀，首先需要找出最短字符串的长度，然后遍历每个字符串，依次比较每个字符
+"""
 class Solution:
     def longestCommonPrefix(self, strs: list):
         common_str = strs[0] if strs else ""
