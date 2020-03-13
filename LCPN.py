@@ -11,24 +11,25 @@ Input: "23"
 Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 '''
 
+"""
+1、先把前面的元素一个一个组合完，然后再依次和后面的每一个元素进行组合
+"""
+class Solution:
+    def letterCombinations(self, digits: str) -> list:
+        dic = {'2':'abc', '3':'def', '4':'ghi', '5':'jkl',
+                '6':'mno', '7':'pqrs', '8':'tuv', '9':'wxyz'}
+        if len(digits)==0:
+            return []
+        for i in range(len(digits)):
+            res = []
+            if i == 0:
+                for k in dic[digits[i]]:
+                    res.append(k)
+            else:
+                for j ,_ in enumerate(tmp):
+                    for k in dic[digits[i]]:
 
-def letterCombinations(self, digits):
-    """
-    :type digits: str
-    :rtype: List[str]
-    """
-    number_dict = {'0':'', '1': '', '2':['a', 'b', 'c'], '3':['d', 'e', 'f'], '4':['g', 'h', 'i'], '5':['j', 'k', 'l'],\
-                   '6':['m', 'n', 'o'], '7':['p', 'q', 's'], '8':['t', 'u', 'v'], '9':['w', 'x', 'y', 'z']}
-    len_dit = len(digits)
-    if len_dit == 0:
-        return None
-
-    count = 0
-
-def ditgits_to_str(digits, count, number_dict, len_dit, result, s):
-    if len_dit == count:
-        result.append(s)
-        return
-    else:
-        for i in digits:
-            s += number_dict[]
+                        res.append(tmp[j]+k)
+            tmp = res
+        return res
+print(Solution().letterCombinations("23"))
