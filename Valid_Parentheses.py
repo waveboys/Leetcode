@@ -34,6 +34,7 @@ Output: true
 """
 """
 使用堆栈，当出现有左边的符号时，加入堆栈，当出险右边的符号时，pop出堆栈进行匹配。
+注意空的情况，最后还要判断堆栈是否为空
 """
 class Solution:
     def isValid(self, s: str) -> bool:
