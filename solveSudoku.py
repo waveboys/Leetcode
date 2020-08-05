@@ -4,7 +4,9 @@
 #@Author: guangliang
 #@File  : solveSudoku.py
 """
-解题思路：对于每一个
+解题思路：对于每一个要进行填充的数字，遍历每一个数字然后看是否满足数独的条件。
+1、对于每个等待填充的数字，要看它所在的行、列与三角形结构数组里是否满足数独的条件
+2、对于每个等待填充的数字，还要回溯下后面等待填充的是否满足数独的条件
 """
 class Solution:
     def solveSudoku(self,board:list)->None:
@@ -29,6 +31,7 @@ class Solution:
                     if board[i][j] == '.':
                         for num in "123456789":
                             board[i][j] = num
+                            # dfs 回溯后面等待填充的是否能满足数独条件
                             if is_validSudoku(board,i,j) and dfs(board):
                                 return True
                             board[i][j] = '.'
