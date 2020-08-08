@@ -11,7 +11,7 @@ class Solution:
             self.res.append(r[:])
         for j in range(i,len(candidates)):
             temp = candidates[j]
-            if s + temp > target:
+            if s + temp > target:    # 注意不能赋值后再去和target 比较
                 break
             s += temp
             r.append(temp)
