@@ -43,6 +43,9 @@ p = "*a*b"
 Output: true
 Explanation: The first '*' matches the empty sequence, while the second '*' matches the substring "dce".
 """
+"""
+解题思路：动态规划问题
+"""
 class Solution:
     def isMatch(self, s: str, p: str, tab=None) -> bool:
         if not p:
