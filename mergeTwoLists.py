@@ -29,3 +29,19 @@ class Solution:
         else:
             l2.next = self.mergeTwoLists(l1, l2.next)
             return l2
+
+
+# 测试
+l1 = ListNode(x=1)
+l1.val = 1
+l1.next = ListNode(2)
+l1.next.next = ListNode(4)
+l1.next.next.next = ListNode(6)
+l2 = ListNode(x=1)
+l2.next = ListNode(3)
+l2.next.next = ListNode(5)
+l2.next.next.next = ListNode(7)
+l = Solution().mergeTwoLists(l1,l2)
+while l:
+    print(l.val)
+    l = l.next
